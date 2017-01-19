@@ -1,0 +1,50 @@
+!!!
+%html{:lang => 'en'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %title uMetrica
+    %meta{content: 'James Conant', name: 'author'}
+
+    %link{href: 'css/normalize.min.css', rel: 'stylesheet'}
+    - file = 'css/styles.css'
+    - href = "#{file}?v=#{Digest::SHA256.file(file).to_s}"
+    %link{href: href, rel: 'stylesheet'}
+
+  %body
+    #hex-overlay
+    .nav
+      .nav-brand-name
+        uMetrica
+
+      .nav-session-management
+        %a{href: '#'}
+          START
+
+    .statement-quadrant
+      .statement-quadrant-primary
+        When results matter.
+
+      .statement-quadrant-secondary
+        Success is more than a sum of numbers.
+        %br
+        To achieve your goals you need a Pro, not a pal.
+
+    .cta-quadrant
+      .cta-quadrant-left
+        %img.cta-quadrant-left-img{alt: "service links",
+                                   src: 'images/service-diagram.svg'}
+
+      .cta-quadrant-right
+        .cta-quadrant-right-question
+          What do you need to succeed at?
+
+        -#.mobile-down-arrow
+
+        .cta-quadrant-right-options
+          %a.button-multi{href: '#'}
+            OPTIMAL PERFORMANCE
+
+          %a{href: '#'}
+            MANAGE HEALTH CONDITION
+
+    %video#bg-vid{src: 'video/background.mkv', loop: true, autoplay: true}
