@@ -10,6 +10,9 @@
     - href = "#{file}?v=#{Digest::SHA256.file(file).to_s}"
     %link{href: href, rel: 'stylesheet'}
 
+    %link{:href => "favicon.ico", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "favicon.ico", :rel => "icon", :type => "image/x-icon"}/
+
   %body
     #hex-overlay
     .nav
