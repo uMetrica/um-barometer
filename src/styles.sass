@@ -119,7 +119,7 @@ a
   z-index: -99
   transition: all
 
-video
+#bg-vid, #bg-img
   position: fixed
   top: 50%
   left: 50%
@@ -135,9 +135,17 @@ video
   background: url('../images/weight-still.png') no-repeat
   background-size: cover
 
+#bg-img
+  display: none
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
   $nav-height: 160px
+
+  #bg-vid
+    display: none
+
+  #bg-img
+    display: block
 
   a
     padding: 20px 80px
